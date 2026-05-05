@@ -223,7 +223,7 @@ export default function ResultsPage({ results, onRetake }: ResultsPageProps) {
             </div>
           </section>
 
-          {/* ── Top 3 Gifts ── */}
+          {/* ── Top 5 Gifts ── */}
           <section
             className="glass-card fade-in fade-in-delay-2"
             style={{ padding: 20, marginBottom: 16 }}

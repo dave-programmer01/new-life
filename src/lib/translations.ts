@@ -69,8 +69,8 @@ export const ui: Record<
     es: "Tipo de Personalidad",
   },
   topGifts: {
-    en: "Your Top 3 Spiritual Gifts",
-    es: "Tus 3 Principales Dones Espirituales",
+    en: "Your Top 5 Spiritual Gifts",
+    es: "Tus 5 Principales Dones Espirituales",
   },
   dreamTeam: {
     en: "Recommended Dream Team",

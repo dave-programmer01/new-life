@@ -101,7 +101,7 @@ function calculateDISC(answers: Record<number, number>): DISCResult {
 }
 
 /**
- * Calculate top 3 spiritual gifts from answers 21–92
+ * Calculate top 5 spiritual gifts from answers 21–92
  */
 function calculateGifts(answers: Record<number, number>): GiftResult[] {
   const giftScores: GiftResult[] = Object.entries(giftGroupings).map(
@@ -112,11 +112,11 @@ function calculateGifts(answers: Record<number, number>): GiftResult[] {
   );
 
   giftScores.sort((a, b) => b.score - a.score);
-  return giftScores.slice(0, 3);
+  return giftScores.slice(0, 5);
 }
 
 /**
- * Determine recommended ministries from top 3 gifts
+ * Determine recommended ministries from top 5 gifts
  */
 function calculateMinistries(topGifts: GiftResult[]): string[] {
   const ministryCounts: Record<string, number> = {};
