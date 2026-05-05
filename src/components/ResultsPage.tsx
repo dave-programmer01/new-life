@@ -66,23 +66,16 @@ export default function ResultsPage({ results, onRetake }: ResultsPageProps) {
             style={{
               width: 28,
               height: 28,
-              borderRadius: 6,
-              background: "linear-gradient(135deg, var(--gold-500), var(--gold-400))",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <span
-              style={{
-                color: "var(--navy-950)",
-                fontWeight: 800,
-                fontSize: "0.625rem",
-                lineHeight: 1,
-              }}
-            >
-              NL
-            </span>
+            <img 
+              src="/icon.svg" 
+              alt="NLBX Logo" 
+              style={{ width: "100%", height: "100%", objectFit: "contain" }} 
+            />
           </div>
           <span
             style={{

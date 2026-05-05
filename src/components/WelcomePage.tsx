@@ -59,24 +59,16 @@ export default function WelcomePage({ onBegin }: WelcomePageProps) {
             style={{
               width: "32px",
               height: "32px",
-              borderRadius: "8px",
-              background: "linear-gradient(to bottom right, var(--gold-500), var(--gold-400))",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 4px 14px rgba(201, 162, 78, 0.2)",
             }}
           >
-            <span
-              style={{
-                color: "var(--navy-950)",
-                fontWeight: 800,
-                fontSize: "12px",
-                lineHeight: 1,
-              }}
-            >
-              NL
-            </span>
+            <img 
+              src="/icon.svg" 
+              alt="NLBX Logo" 
+              style={{ width: "100%", height: "100%", objectFit: "contain" }} 
+            />
           </div>
           <span
             style={{
@@ -129,19 +121,11 @@ export default function WelcomePage({ onBegin }: WelcomePageProps) {
                 justifyContent: "center",
               }}
             >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                style={{ color: "var(--gold-400)" }}
-              >
-                <path d="M12 2v20M2 12h20" />
-              </svg>
+              <img 
+                src="/icon.svg" 
+                alt="Icon" 
+                style={{ width: "32px", height: "32px", objectFit: "contain" }} 
+              />
             </div>
           </div>
 
