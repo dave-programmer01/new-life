@@ -113,19 +113,19 @@ export default function WelcomePage({ onBegin }: WelcomePageProps) {
             <div
               className="glass-card pulse-glow"
               style={{
-                width: "64px",
-                height: "64px",
-                borderRadius: "16px",
+                width: "80px",
+                height: "80px",
+                borderRadius: "20px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <img 
-                src="/icon.svg" 
-                alt="Icon" 
-                style={{ width: "32px", height: "32px", objectFit: "contain" }} 
-              />
+              <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 20 v 60 a 30 30 0 0 0 0 -60 z" fill="var(--royal-blue)" />
+                <path d="M35 20 v 60 a 30 30 0 0 0 0 -60 z" fill="var(--sky-blue)" />
+                <path d="M55 20 v 60 a 30 30 0 0 0 0 -60 z" fill="var(--green)" />
+              </svg>
             </div>
           </div>
 
