@@ -56,7 +56,7 @@ export const ui: Record<
   never: { en: "Never", es: "Nunca" },
   rarely: { en: "Rarely", es: "Casi nunca" },
   sometimes: { en: "Sometimes", es: "A veces" },
-  often: { en: "Often", es: "Seguido" },
+  often: { en: "Often", es: "A menudo" },
   always: { en: "Always", es: "Siempre" },
 
   // Results
@@ -91,6 +91,40 @@ export const ui: Record<
   scoreLabel: {
     en: "Score",
     es: "Puntuación",
+  },
+
+  // Share Modal
+  fullName: {
+    en: "Full Name",
+    es: "Nombre Completo",
+  },
+  send: {
+    en: "Send",
+    es: "Enviar",
+  },
+  cancel: {
+    en: "Cancel",
+    es: "Cancelar",
+  },
+  sending: {
+    en: "Sending...",
+    es: "Enviando...",
+  },
+  shareModalTitle: {
+    en: "Share Your Results",
+    es: "Comparte tus Resultados",
+  },
+  shareModalDesc: {
+    en: "Enter your full name to send your results to the church office.",
+    es: "Ingresa tu nombre completo para enviar tus resultados a la oficina de la iglesia.",
+  },
+  successMessage: {
+    en: "Results sent successfully!",
+    es: "¡Resultados enviados con éxito!",
+  },
+  errorMessage: {
+    en: "Error sending results. Please try again.",
+    es: "Error al enviar los resultados. Por favor intenta de nuevo.",
   },
 };
 
@@ -267,4 +301,32 @@ export const giftDescriptions: Record<string, { en: string; es: string }> = {
     en: "The ability to apply spiritual truth and godly insight to life's decisions and situations.",
     es: "La capacidad de aplicar la verdad espiritual y la perspectiva divina a las decisiones y situaciones de la vida.",
   },
+};
+
+// Ministry names in both languages
+export const ministryTranslations: Record<string, { en: string; es: string }> = {
+  "A-Team": { en: "A-Team", es: "Equipo A" },
+  "Kids Check-in": { en: "Kids Check-in", es: "Registro de Niños" },
+  "Setup/Takedown": { en: "Setup/Takedown", es: "Montaje/Desmontaje" },
+  "Production": { en: "Production", es: "Producción" },
+  "Growth Track Team": { en: "Growth Track Team", es: "Equipo de Growth Track" },
+  "Small Group Leadership": { en: "Small Group Leadership", es: "Liderazgo de Grupos Pequeños" },
+  "Facilities": { en: "Facilities", es: "Instalaciones" },
+  "New Life Kids": { en: "New Life Kids", es: "Nueva Vida Niños" },
+  "New Life Students": { en: "New Life Students", es: "Nueva Vida Estudiantes" },
+  "Prayer Team": { en: "Prayer Team", es: "Equipo de Oración" },
+  "Ushers": { en: "Ushers", es: "Ujieres" },
+  "Outreach": { en: "Outreach", es: "Alcance" },
+  "Dream Team Serve": { en: "Dream Team Serve", es: "Dream Team Servicio" },
+  "Events": { en: "Events", es: "Eventos" },
+  "Greeters": { en: "Greeters", es: "Bienvenida" },
+  "Hospitality Team": { en: "Hospitality Team", es: "Equipo de Hospitalidad" },
+  "Info/Resource Team": { en: "Info/Resource Team", es: "Equipo de Información" },
+  "Parking Team": { en: "Parking Team", es: "Equipo de Estacionamiento" },
+  "Preschool/Nursery": { en: "Preschool/Nursery", es: "Preescolar/Guardería" },
+  "Legacy Team": { en: "Legacy Team", es: "Equipo Legado" },
+  "First Responders": { en: "First Responders", es: "Primeros Respondedores" },
+  "New Life Worship": { en: "New Life Worship", es: "Nueva Vida Adoración" },
+  "All Teams — You can serve anywhere!": { en: "All Teams — You can serve anywhere!", es: "Todos los Equipos — ¡Puedes servir en cualquier área!" },
+  "All Teams": { en: "All Teams", es: "Todos los Equipos" },
 };

@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { useLang } from "@/lib/LangContext";
 import {
   discDescriptions,
   giftNames,
   giftDescriptions,
+  ministryTranslations,
 } from "@/lib/translations";
 import type { QuizResults } from "@/lib/scoring";
 import LanguageToggle from "./LanguageToggle";
+import ShareModal from "./ShareModal";
 
 interface ResultsPageProps {
   results: QuizResults;
@@ -23,29 +26,10 @@ export default function ResultsPage({ results, onRetake }: ResultsPageProps) {
     ? discDescriptions[disc.secondary]
     : null;
 
-  const handleShare = async () => {
-    const giftsList = topGifts
-      .map((g) => giftNames[g.letter]?.[lang] || g.letter)
-      .join(", ");
-    const text =
-      lang === "es"
-        ? `🙌 Mis resultados de Pasos de Crecimiento — New Life Bronx:\n\nPersonalidad: ${disc.combo} (${discInfo?.es.name})\nDones: ${giftsList}\nMinisterio: ${recommendedMinistries.join(", ")}`
-        : `🙌 My Growth Track Results — New Life Bronx:\n\nPersonality: ${disc.combo} (${discInfo?.en.name})\nGifts: ${giftsList}\nMinistry: ${recommendedMinistries.join(", ")}`;
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
-    if (navigator.share) {
-      try {
-        await navigator.share({ title: "Growth Track Results", text });
-      } catch {
-        /* cancelled */
-      }
-    } else {
-      await navigator.clipboard.writeText(text);
-      alert(
-        lang === "es"
-          ? "¡Copiado al portapapeles!"
-          : "Copied to clipboard!"
-      );
-    }
+  const handleShare = () => {
+    setIsShareModalOpen(true);
   };
 
   return (
@@ -376,11 +360,14 @@ export default function ResultsPage({ results, onRetake }: ResultsPageProps) {
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-              {recommendedMinistries.map((m) => (
-                <span key={m} className="ministry-tag">
-                  ✦ {m}
-                </span>
-              ))}
+              {recommendedMinistries.map((m) => {
+                const translatedM = ministryTranslations[m]?.[lang] || m;
+                return (
+                  <span key={m} className="ministry-tag">
+                    ✦ {translatedM}
+                  </span>
+                );
+              })}
             </div>
           </section>
 
@@ -440,6 +427,12 @@ export default function ResultsPage({ results, onRetake }: ResultsPageProps) {
       >
         © {new Date().getFullYear()} New Life Bronx Church
       </footer>
+
+      <ShareModal
+        isOpen={isShareModalOpen}
+        onClose={() => setIsShareModalOpen(false)}
+        results={results}
+      />
     </div>
   );
 }
